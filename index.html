@@ -1,185 +1,137 @@
-<!DOCTYPE HTML>
-<!--
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>SHIVA IYER PORTFOLIO</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Becoming a Polymath — Shiva Iyer</title>
+<meta name="description" content="One mind, many crafts. Shiva Iyer's polymath project — equity research live, more domains in development.">
+<link rel="icon" href="images/avatar.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-		<!-- Header -->
-			<div id="header">
+<!-- rail -->
+<header class="rail">
+  <a class="avatar" href="index.html" aria-label="Home"><img src="images/avatar.jpg" alt="Shiva Iyer"></a>
+  <nav aria-label="Primary">
+    <a href="index.html" aria-current="page" aria-label="Home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
+      <span class="tip">Home</span>
+    </a>
+    <a href="finance.html" aria-label="Finance">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M6 21V10"/><path d="M11 21V6"/><path d="M16 21v-8"/><path d="M21 21V3"/></svg>
+      <span class="tip">Finance</span>
+    </a>
+    <a href="about.html" aria-label="About">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg>
+      <span class="tip">About</span>
+    </a>
+  </nav>
+  <button class="theme-btn" aria-label="Toggle theme">
+    <svg class="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+    <svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
+  </button>
+</header>
 
-				<div class="top">
+<main>
 
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
-							<h1 id="title">SHIVA IYER</h1>
-							<p>CFA Level 2 Candidate & Equity Research Analyst</p>
-						</div>
+  <!-- hero -->
+  <section class="hero">
+    <div class="rays" id="rays" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <p class="who li li-1">Shiva Iyer — Mumbai</p>
+      <h1 class="li li-2">Becoming a <span class="gold">Polymath</span></h1>
+      <p class="proverb li li-3">"A jack of all trades is a master of none, but oftentimes better than a master of one."</p>
+      <p class="sub li li-4">One mind, many crafts — built in public, one domain at a time. Finance is live. The rest is loading.</p>
+    </div>
+    <div class="scroll-cue">Scroll</div>
+  </section>
 
-					<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html" id="contact-link"><span class="icon solid fa-home">HOME</span></a></li>
-							<li><a href="#top" id="top-link" class="scrolly"><span class="icon solid fa-address-card">INTRO</span></a></li>
-							<li><a href="#portfolio" id="portfolio-link" class="scrolly"><span class="icon solid fa-th">PORTFOLIO</span></a></li>
-							<li><a href="#about" id="about-link" class="scrolly"><span class="icon solid fa-user">ABOUT ME</span></a></li>
-						</ul>
-					</nav>
-					
-					<!-- Include jQuery library -->
-					<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-					
-					<!-- JavaScript code to handle smooth scrolling -->
-					<script>
-						$(document).ready(function() {
-							// Smooth scrolling when clicking on navigation links
-							$(".scrolly").on("click", function(e) {
-								e.preventDefault();
-								var target = this.hash;
-								var $target = $(target);
-								$("html, body").stop().animate({
-									"scrollTop": $target.offset().top
-								}, 800, "swing", function() {
-									window.location.hash = target;
-								});
-							});
-						});
-					</script>
-					
+  <!-- domains -->
+  <section id="domains">
+    <div class="wrap">
+      <p class="eyebrow rv">The domains</p>
+      <h2 class="h2 rv">Where the work lives</h2>
+      <p class="lead rv" style="margin-bottom:46px">Each domain gets the same treatment: primary sources, real deliverables, public output. No surveys, no summaries of summaries.</p>
 
-				</div>
+      <div class="domains">
+        <a class="dcard live rv" href="finance.html">
+          <div class="dnum"><span>D—01</span><span class="chip on">Live</span></div>
+          <h3>Finance</h3>
+          <p>Institutional-grade equity research under Kuberpath Financials — full DCF, CCA and DDM valuations with published reports and actionable ratings.</p>
+          <div class="stats">
+            <div><b>5</b><span>Companies</span></div>
+            <div><b>$94Bn+</b><span>Coverage mcap</span></div>
+            <div><b>4</b><span>Methodologies</span></div>
+          </div>
+          <span class="go">Enter the research
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </a>
 
-				<div class="bottom">
+        <div class="dcard dim rv rv-d1">
+          <div class="dnum"><span>D—02</span><span class="chip wip">In Development</span></div>
+          <h3>Game Theory</h3>
+          <p>Strategic interaction from first principles — foundations laid, the book stack is open. First public work lands here soon.</p>
+        </div>
 
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/shiva-iyer129/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-							<li><a href="https://github.com/SHIVA-IYER-SI?tab=repositories" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="mailto:shivaiyer79@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
+        <div class="dcard dim rv rv-d2">
+          <div class="dnum"><span>D—03</span><span class="chip wip">In Progress</span></div>
+          <div class="redact" aria-hidden="true"></div>
+          <p>Unannounced. The ray is lit before the name is.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-				</div>
+  <!-- about short -->
+  <section id="about">
+    <div class="wrap">
+      <p class="eyebrow rv">The person</p>
+      <div class="about-strip rv">
+        <div class="pic"><img src="images/avatar.jpg" alt="Shiva Iyer"></div>
+        <div>
+          <h2 class="h2" style="margin-bottom:10px">Shiva Rajgopal Iyer</h2>
+          <p class="lead" style="margin-bottom:22px">Equity research analyst by trade — CFA Level 2 candidate and co-founder of Kuberpath Financials — and a systems-builder by temperament. Engineering degree from Mumbai, research training from Toronto, now building depth across many fields and documenting it as it happens.</p>
+          <a class="btn" href="about.html">The full story
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-			</div>
+  <!-- contact -->
+  <section id="contact" style="padding-top:0">
+    <div class="wrap">
+      <p class="eyebrow rv">Contact</p>
+      <h2 class="h2 rv">Reach out</h2>
+      <div class="contact rv rv-d1" style="margin-top:24px">
+        <a href="https://www.linkedin.com/in/shiva-iyer129/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.05c.53-1 1.84-2.2 3.8-2.2 4.06 0 4.8 2.67 4.8 6.15V24h-4v-8.5c0-2.03-.04-4.65-2.83-4.65-2.84 0-3.27 2.21-3.27 4.5V24H8V8z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/SHIVA-IYER-SI" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.55v-2.1c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .3.21.66.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          GitHub
+        </a>
+        <a href="mailto:shivaiyer79@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 6 9 7 9-7"/></svg>
+          Email
+        </a>
+      </div>
+      <footer style="margin-top:70px">
+        <span>© 2026 Shiva Iyer</span>
+        <span class="mono" style="font-size:.76rem">29 domains to go</span>
+      </footer>
+    </div>
+  </section>
 
-		<!-- Main -->
-			<div id="main">
+</main>
 
-				<!-- Intro -->
-				<section id="top" name="top" class="one dark cover">
-					<div class="container">
-						<header>
-							<h2 class="alt">
-								<bold>
-									SHIVA IYER<br />
-									PORTFOLIO
-								</bold>
-							</h2>
-							<p style="color: white;">
-								</pstyle>A portfolio demonstrating the strategic application of finance theory to deliver high-impact <br>
-								decision-ready investment research reports. <a href="https://www.linkedin.com/in/shiva-iyer129/"> @Shiva Iyer</a>
-							</p>
-						</header>
-						<footer>
-							<a href="#portfolio" class="button icon solid solo fa-arrow-down scrolly"></a>
-						</footer>
-					</div>
-				</section>
-
-				<!-- Portfolio -->
-				<section id="portfolio" class="two">
-					<div class="container">
-					  <header>
-						<h2>PORTFOLIO</h2>
-					  </header>
-					  <p>Welcome to my Financial Modeling Portfolio. Here, I showcase my comprehensive ability to translate complex financial and market data into defensible valuations and high-impact research reports. Each project is a testament to my skill in strategic analysis and the delivery of decision-ready investment documents.</p>
-				  
-					  <div class="row justify-content-center">
-						  <div class="col-md-4">
-							  <article class="item">
-								  <a href="Equity Valuation Models.html" class="image fit"><img src="images/pic03.jpg" alt="" class="img-fluid" /></a>
-								  <header>
-									  <h3 style="color: black;"><a href="Equity Valuation Models.html">EQUITY VALUATION & FINANCIAL MODELING</a></h3>
-								  </header>
-							  </article>
-						  </div>
-					  </div>
-				  </section>
-				  
-
-				<!-- About Me -->
-					<section id="about" class="three">
-						<div class="container">
-
-							<header>
-								<h2>ABOUT ME</h2>
-							</header>
-
-							<a href="https://www.linkedin.com/in/shiva-iyer129/" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-
-							<p>Welcome to my Equity Valuation and Investment Research Portfolio. I am a highly analytical CFA Level 2 Candidate with a strong technical background, having earned a Mechanical Engineering degree and a Post Graduate Diploma in Research Analysis. This portfolio showcases my specialized expertise in financial modeling and fundamental analysis, where I leverage Microsoft Excel for dynamic scenario analysis and rigorous forecasting. My work is committed to applying the absolute highest standard of analytical rigor to translate complex market data into defensible DCF valuations and concise, high-impact research reports, driving strategic investment decisions.</p>
-								<p style="color: rgb(0, 17, 255);"></pstyle><a href="ABOUT ME.html">READ MORE </a></p>
-							</header>
-						</div>
-					</section>
-
-				<!-- Contact -->
-					<!---<section id="HOME" class="four">
-						<div class="container">
-
-							
-
-							<p>Elementum sem parturient nulla quam placerat viverra
-							mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia
-							donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
-							orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>-->
-
-						<!---	<form method="post" action="#">
-								<div class="row">
-									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
-									<div class="col-12">
-										<textarea name="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<input type="submit" value="Send Message" />
-									</div>
-								</div>
-							</form>
-
-						</div>
-					 </section>--->
-
-			</div>
-
-		<!-- Footer -->
-			<div id="footer">
-
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-
-			</div>
-
-		<!-- Scripts -->
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+<script src="app.js"></script>
+</body>
 </html>
