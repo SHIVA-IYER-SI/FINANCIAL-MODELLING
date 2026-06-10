@@ -184,18 +184,6 @@ section{padding:90px 0}
   font-style:italic;
 }
 .hero .sub{margin-top:26px;color:var(--ink-2);font-size:.95rem;max-width:52ch}
-.scroll-cue{
-  position:absolute;bottom:34px;left:50%;transform:translateX(-50%);
-  color:var(--ink-2);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
-  display:flex;flex-direction:column;align-items:center;gap:10px;z-index:1;
-  font-family:"IBM Plex Mono",monospace;
-}
-.scroll-cue::after{
-  content:"";width:1px;height:42px;
-  background:linear-gradient(var(--gold),transparent);
-  animation:drip 2s ease-in-out infinite;
-}
-@keyframes drip{0%{transform:scaleY(0);transform-origin:top}55%{transform:scaleY(1);transform-origin:top}56%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
 /* hero load-in */
 .li{opacity:0;transform:translateY(22px);animation:rise .85s cubic-bezier(.2,.7,.2,1) forwards}
