@@ -67,42 +67,43 @@ a{color:inherit;text-decoration:none}
 h1,h2,h3{font-family:"Space Grotesk",sans-serif;line-height:1.08;letter-spacing:-.01em}
 .mono{font-family:"IBM Plex Mono",monospace}
 
-/* ---------- left rail / top bar ---------- */
+/* ---------- left sidebar / top bar ---------- */
 .rail{
-  position:fixed;inset:0 auto 0 0;width:84px;z-index:50;
-  display:flex;flex-direction:column;align-items:center;
-  padding:22px 0;gap:26px;
+  position:fixed;inset:0 auto 0 0;width:216px;z-index:50;
+  display:flex;flex-direction:column;
+  padding:30px 18px 24px;gap:10px;
   background:var(--rail-bg);backdrop-filter:blur(14px);
   border-right:1px solid var(--line);
 }
+.rail .id{display:flex;flex-direction:column;align-items:center;gap:12px;
+  padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:14px}
 .rail .avatar{
-  width:46px;height:46px;border-radius:50%;overflow:hidden;
+  width:62px;height:62px;border-radius:50%;overflow:hidden;
   border:2px solid var(--gold);flex:none;
 }
 .rail .avatar img{width:100%;height:100%;object-fit:cover;object-position:top}
-.rail nav{display:flex;flex-direction:column;gap:8px;flex:1;justify-content:center}
+.rail .id b{font-family:"Space Grotesk",sans-serif;font-size:1.02rem;
+  font-weight:700;letter-spacing:.04em}
+.rail .id span{font-size:.7rem;color:var(--ink-2);letter-spacing:.08em;
+  text-transform:uppercase;text-align:center;line-height:1.5}
+.rail nav{display:flex;flex-direction:column;gap:6px;flex:1}
 .rail nav a{
-  width:46px;height:46px;border-radius:13px;
-  display:grid;place-items:center;color:var(--ink-2);
-  transition:all .22s ease;position:relative;
+  display:flex;align-items:center;gap:12px;
+  padding:11px 14px;border-radius:11px;color:var(--ink-2);
+  font-weight:500;font-size:.92rem;transition:all .22s ease;
 }
-.rail nav a svg{width:21px;height:21px}
+.rail nav a svg{width:19px;height:19px;flex:none}
 .rail nav a:hover{color:var(--ink);background:var(--gold-soft)}
-.rail nav a[aria-current="page"]{color:var(--gold);background:var(--gold-soft)}
-.rail nav a .tip{
-  position:absolute;left:58px;top:50%;transform:translateY(-50%) translateX(-4px);
-  background:var(--ink);color:var(--bg);font-size:.72rem;font-weight:600;
-  padding:5px 10px;border-radius:7px;white-space:nowrap;
-  opacity:0;pointer-events:none;transition:all .18s ease;
-}
-.rail nav a:hover .tip{opacity:1;transform:translateY(-50%) translateX(0)}
+.rail nav a[aria-current="page"]{color:var(--gold);background:var(--gold-soft);font-weight:600}
 .theme-btn{
-  width:46px;height:46px;border-radius:13px;border:1px solid var(--line);
+  display:flex;align-items:center;gap:12px;width:100%;
+  padding:11px 14px;border-radius:11px;border:1px solid var(--line);
   background:transparent;color:var(--ink-2);cursor:pointer;
-  display:grid;place-items:center;transition:all .22s ease;flex:none;
+  font-family:inherit;font-weight:500;font-size:.9rem;
+  transition:all .22s ease;
 }
 .theme-btn:hover{color:var(--gold);border-color:var(--gold)}
-.theme-btn svg{width:19px;height:19px}
+.theme-btn svg{width:18px;height:18px;flex:none}
 .theme-btn .ic-moon{display:none}
 :root[data-theme="dark"] .theme-btn .ic-sun{display:none}
 :root[data-theme="dark"] .theme-btn .ic-moon{display:block}
@@ -111,20 +112,24 @@ h1,h2,h3{font-family:"Space Grotesk",sans-serif;line-height:1.08;letter-spacing:
   :root:not([data-theme="light"]) .theme-btn .ic-moon{display:block}
 }
 
-main{margin-left:84px}
+main{margin-left:216px}
 
-@media (max-width:860px){
+@media (max-width:900px){
   .rail{
-    inset:0 0 auto 0;width:100%;height:62px;
-    flex-direction:row;padding:0 16px;gap:14px;
+    inset:0 0 auto 0;width:100%;height:64px;
+    flex-direction:row;align-items:center;padding:0 16px;gap:12px;
     border-right:none;border-bottom:1px solid var(--line);
   }
-  .rail .avatar{width:38px;height:38px}
-  .rail nav{flex-direction:row;justify-content:flex-end;gap:4px}
-  .rail nav a{width:40px;height:40px}
-  .rail nav a .tip{display:none}
-  .theme-btn{width:40px;height:40px}
-  main{margin-left:0;margin-top:62px}
+  .rail .id{flex-direction:row;padding:0;border:none;margin:0;gap:10px}
+  .rail .avatar{width:40px;height:40px}
+  .rail .id b{font-size:.92rem}
+  .rail .id span{display:none}
+  .rail nav{flex-direction:row;justify-content:flex-end;gap:2px}
+  .rail nav a{padding:9px 11px}
+  .rail nav a .lbl{display:none}
+  .theme-btn{width:auto;padding:9px 11px;border:none}
+  .theme-btn .lbl{display:none}
+  main{margin-left:0;margin-top:64px}
 }
 
 /* ---------- shared layout ---------- */
