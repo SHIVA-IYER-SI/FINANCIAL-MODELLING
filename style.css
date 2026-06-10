@@ -1,6 +1,6 @@
 /* ============================================================
    BECOMING A POLYMATH — Shiva Iyer
-   Tokens · ink navy / warm gold · Syne + IBM Plex
+   Tokens · ink navy / warm gold · Space Grotesk + IBM Plex
    ============================================================ */
 
 :root{
@@ -64,7 +64,7 @@ body{
 }
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
-h1,h2,h3{font-family:"Syne",sans-serif;line-height:1.08;letter-spacing:-.01em}
+h1,h2,h3{font-family:"Space Grotesk",sans-serif;line-height:1.08;letter-spacing:-.01em}
 .mono{font-family:"IBM Plex Mono",monospace}
 
 /* ---------- left rail / top bar ---------- */
@@ -79,6 +79,7 @@ h1,h2,h3{font-family:"Syne",sans-serif;line-height:1.08;letter-spacing:-.01em}
   width:46px;height:46px;border-radius:50%;overflow:hidden;
   border:2px solid var(--gold);flex:none;
 }
+.rail .avatar img{width:100%;height:100%;object-fit:cover;object-position:top}
 .rail nav{display:flex;flex-direction:column;gap:8px;flex:1;justify-content:center}
 .rail nav a{
   width:46px;height:46px;border-radius:13px;
@@ -168,7 +169,7 @@ section{padding:90px 0}
   text-transform:uppercase;color:var(--ink-2);margin-bottom:22px;
 }
 .hero h1{
-  font-size:clamp(2.7rem,7.2vw,5.4rem);font-weight:800;
+  font-size:clamp(2.7rem,7.2vw,5.4rem);font-weight:700;
   max-width:13ch;margin-bottom:30px;
 }
 .hero h1 .gold{color:var(--gold)}
@@ -246,13 +247,13 @@ section{padding:90px 0}
 
 /* ---------- about strip (index) ---------- */
 .about-strip{
-  display:grid;grid-template-columns:170px 1fr;gap:40px;align-items:center;
+  display:grid;grid-template-columns:300px 1fr;gap:40px;align-items:center;
   border:1px solid var(--line);border-radius:20px;background:var(--surface);
   padding:40px;
 }
-@media (max-width:700px){.about-strip{grid-template-columns:1fr;text-align:center;justify-items:center}}
-.about-strip .pic{width:150px;height:150px;border-radius:50%;overflow:hidden;border:3px solid var(--gold)}
-.about-strip .pic img{width:100%;height:100%;object-fit:cover}
+@media (max-width:760px){.about-strip{grid-template-columns:1fr;text-align:center;justify-items:center}}
+.frame{border:3px solid var(--gold);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+.frame img{width:100%;height:auto;display:block}
 .btn{
   display:inline-flex;align-items:center;gap:9px;
   padding:11px 22px;border-radius:11px;font-weight:600;font-size:.92rem;
@@ -280,7 +281,7 @@ footer{
 
 /* ---------- finance page ---------- */
 .fin-head{padding:120px 0 60px}
-.fin-head h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;margin:14px 0 10px}
+.fin-head h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:700;margin:14px 0 10px}
 .fin-head .role{color:var(--ink-2);font-size:1.02rem}
 .fin-head .role b{color:var(--gold);font-weight:600}
 .statbar{
@@ -301,9 +302,12 @@ footer{
 }
 .pcard:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:var(--shadow)}
 @media (max-width:820px){.pcard{grid-template-columns:1fr}}
-.pcard .pimg{position:relative;min-height:230px;background:var(--bg-soft)}
-.pcard .pimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-@media (max-width:820px){.pcard .pimg{min-height:190px}}
+.pcard .pimg{
+  position:relative;background:var(--bg-soft);
+  display:grid;place-items:center;padding:22px;min-height:220px;
+}
+.pcard .pimg img{max-height:200px;width:auto;max-width:100%;border-radius:10px}
+@media (max-width:820px){.pcard .pimg{min-height:180px}.pcard .pimg img{max-height:160px}}
 .pcard .pbody{padding:30px 32px;display:flex;flex-direction:column;gap:14px}
 .pcard .ptop{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
 .pcard h3{font-size:1.42rem;font-weight:700}
@@ -337,11 +341,44 @@ footer{
 
 /* ---------- about page ---------- */
 .ab-head{padding:120px 0 50px}
-.ab-grid{display:grid;grid-template-columns:190px 1fr;gap:46px;align-items:center}
-@media (max-width:760px){.ab-grid{grid-template-columns:1fr;justify-items:center;text-align:center}}
+.ab-grid{display:grid;grid-template-columns:320px 1fr;gap:46px;align-items:center}
+@media (max-width:820px){.ab-grid{grid-template-columns:1fr;justify-items:center;text-align:center}}
+
+/* ---------- finance hub doorways ---------- */
+.doors{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:820px){.doors{grid-template-columns:1fr}}
+.door{
+  position:relative;border:1px solid var(--line);border-radius:20px;
+  background:var(--surface);padding:36px 32px;overflow:hidden;
+  display:flex;flex-direction:column;gap:14px;
+  transition:all .3s cubic-bezier(.2,.7,.2,1);
+}
+.door::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;
+  background:linear-gradient(90deg,var(--gold),transparent 70%)}
+.door:hover{transform:translateY(-7px);border-color:var(--gold);box-shadow:var(--shadow)}
+.door .dnum{font-family:"IBM Plex Mono",monospace;font-size:.74rem;
+  color:var(--ink-2);letter-spacing:.16em}
+.door h3{font-size:1.6rem;font-weight:700}
+.door p{color:var(--ink-2);font-size:.95rem;flex:1}
+.door .covers{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 10px}
+.door .covers span{
+  font-family:"IBM Plex Mono",monospace;font-size:.72rem;
+  padding:5px 12px;border-radius:99px;border:1px solid var(--line);color:var(--ink-2);
+}
+.door .go{display:inline-flex;align-items:center;gap:9px;font-weight:600;
+  font-size:.92rem;color:var(--gold)}
+.door .go svg{width:16px;height:16px;transition:transform .25s ease}
+.door:hover .go svg{transform:translateX(5px)}
+.backline{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:"IBM Plex Mono",monospace;font-size:.78rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-2);margin-bottom:18px;transition:color .2s;
+}
+.backline:hover{color:var(--gold)}
+.backline svg{width:14px;height:14px}
 .ab-head .pic{width:172px;height:172px;border-radius:50%;overflow:hidden;border:3px solid var(--gold)}
 .ab-head .pic img{width:100%;height:100%;object-fit:cover}
-.ab-head h1{font-size:clamp(2.1rem,4.6vw,3.3rem);font-weight:800;margin:12px 0 10px}
+.ab-head h1{font-size:clamp(2.1rem,4.6vw,3.3rem);font-weight:700;margin:12px 0 10px}
 
 .timeline{position:relative;padding-left:46px}
 .timeline::before{
@@ -384,7 +421,7 @@ footer{
   border:1px solid var(--line);border-radius:16px;background:var(--surface);
   padding:24px;border-top:3px solid var(--gold);
 }
-.cert b{font-family:"Syne",sans-serif;font-size:1.04rem;display:block;margin-bottom:5px}
+.cert b{font-family:"Space Grotesk",sans-serif;font-size:1.04rem;display:block;margin-bottom:5px}
 .cert span{color:var(--ink-2);font-size:.86rem;display:block}
 .cert .mono{color:var(--gold);font-size:.76rem;margin-top:10px;display:block}
 
@@ -394,4 +431,9 @@ footer{
   .rv{opacity:1;transform:none}
   .li{opacity:1;transform:none}
   html{scroll-behavior:auto}
+}
+
+/* ---------- justified body copy ---------- */
+.lead,.dcard p,.pcard p,.door p,.tl p,.tl li,.about-strip .lead{
+  text-align:justify;hyphens:auto;-webkit-hyphens:auto;
 }
